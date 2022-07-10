@@ -126,7 +126,7 @@ main{
 .spare{
     display: none;
 }
-.ItemHeader button:hover{
+.ItemHeader button:hover,.spare:hover{
     background-color: black;
     color: white;
 }
@@ -264,7 +264,7 @@ footer{
     display: flex;
     align-items: center;
 }
-.menuOverlay nav{
+.menuOverlay div:last-child{
     margin-top: 125px;
 }
 a.menuItem{
