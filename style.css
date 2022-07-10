@@ -8,6 +8,7 @@ html,body{
     scroll-behavior: smooth;
     background-color: rgb(250, 250, 250);
     overflow-x: hidden;
+    position: relative;
 }
 html{
     font-size: 15px;
@@ -236,6 +237,45 @@ footer{
 .items a:first-of-type{
     margin-left: 0;
 }
+.menuIcon{
+    display: none;
+}
+.menuOverlay{
+    position:fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: black;
+    overflow-y: auto;
+    color: white;
+    box-sizing: border-box;
+    padding:35px 25px;
+    transition: all .55s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+    transform:scale(0) ;
+}
+.visible{
+    transform: scale(1); 
+}
+.hidden{
+    display: hidden;
+}
+.menuHeader{
+    display: flex;
+    align-items: center;
+}
+.menuOverlay nav{
+    margin-top: 125px;
+}
+a.menuItem{
+    margin:15px 0;
+    width: fit-content;
+    display: block;
+    font-family: 'Alata', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
 @media screen and (max-width:1200px) {
     .image-interactivity{
         height:650px;
@@ -261,8 +301,8 @@ footer{
         background-color: white;
         padding: 30px 0 0 50px;
         position: absolute;
-        bottom: 0;
-        right:0px;
+        bottom: -5px;
+        right:-2px;
     }
     header,main,footer{
         padding-right: 85px;
@@ -279,8 +319,20 @@ footer{
     }
 }
 @media screen and (max-width:775px){
+    header{
+        background:url("images/mobile/image-hero.jpg");
+        background-size: cover;
+        padding-top:35px;
+    }
     .headerNav a{
         display: none;
+    }
+    .menuIcon{
+        display: initial;
+    }
+    .close,.menuIcon:hover{
+        cursor: pointer;
+        filter: brightness(75%);
     }
     .firstItem .text{
         width:unset;
