@@ -16,6 +16,7 @@
       <a>Events</a>
       <a>Products</a>
       <a>Support</a>
+      <img src="images/icon-hamburger.svg" alt="open" class="menuIcon" onclick="changeMenuView()">
     </nav>
     <h1>
       Immersive experiences that deliver
@@ -104,25 +105,20 @@
       </div>
       <p>© 2021 Loopstudios. All rights reserved.</p>
     </div>
-    <!-- <div class="social">
-      <img src="images/logo.svg" alt="loopstudios" class="logo">
-      <i><img src="images/icon-facebook.svg" alt="facebook" class="icon"></i>
-      <i><img src="images/icon-twitter.svg" alt="twitter" class="icon"></i>
-      <i><img src="images/icon-pinterest.svg" alt="pinterest" class="icon"></i>
-      <i><img src="images/icon-instagram.svg" alt="instagram" class="icon"></i>
-    </div>
-    <nav class="footerNav">
-      <a>About</a>
-      <a>Careers</a>
-      <a>Events</a>
-      <a>Products</a>
-      <a>Support</a>
-      <p>© 2021 Loopstudios. All rights reserved.</p>
-    </nav> -->
   </footer>
-  <!--
-
-  © 2021 Loopstudios. All rights reserved. -->
+  <aside class="menuOverlay hidden">
+    <div class="menuHeader">
+      <img src="images/logo.svg" alt="loopstudios" class="logo">
+      <img src="images/icon-close.svg" alt="close" class="close" onclick="changeMenuView()">
+    </div>
+    <nav>
+      <a class="menuItem">About</a>
+      <a class="menuItem">Careers</a>
+      <a class="menuItem">Events</a>
+      <a class="menuItem">Products</a>
+      <a class="menuItem">Support</a>
+    </nav>
+  </aside>
   <script src="script.js"></script>
 </body>
 </html>
