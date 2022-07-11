@@ -14,7 +14,6 @@ function changeMenuView(){
 
 function checkViewSize(query){
     if (query.matches){ 
-        console.log("aefaef")
         menu.classList.remove("visible");
         setTimeout(() => {
             menu.classList.add("hidden");
