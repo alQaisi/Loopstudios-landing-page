@@ -52,6 +52,7 @@ a::after,i::after{
     content: '';
     margin: 10px auto 0;
     width:27px;
+    max-width: 50%;
     height: 3px;
     border-radius: 5px;
     background-color: white;
@@ -228,6 +229,7 @@ footer{
 .icons{
     margin:0;
     justify-content:flex-end;
+    align-items: center;
     gap:0 20px;
 }
 .social p{
