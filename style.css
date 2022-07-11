@@ -76,7 +76,8 @@ header h1{
 main{
     box-sizing: border-box;
     padding:50px 160px;
-    margin: 80px 0 150px;
+    margin: 80px auto 150px;
+    max-width: 1440px;
 }
 .image-interactivity{
     background-image: url("images/desktop/image-interactive.jpg");
