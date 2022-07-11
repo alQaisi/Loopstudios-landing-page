@@ -15,6 +15,11 @@ html{
 body{
     background-color: white;
 }
+.max{
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+}
 *{
     font-family: 'Alata', sans-serif;
     font-family: 'Josefin Sans', sans-serif;
@@ -78,7 +83,6 @@ main{
     box-sizing: border-box;
     padding:50px 160px;
     margin: 80px auto 150px;
-    max-width: 1440px;
 }
 .image-interactivity{
     background-image: url("images/desktop/image-interactive.jpg");
@@ -212,6 +216,8 @@ footer{
     background-color: black;
     color: white;
     padding:40px 160px 35px;
+}
+footer .max{
     display: flex;
     justify-content: space-between;
 }
@@ -374,7 +380,7 @@ a.menuItem{
         display: block;
         margin: 40px auto 0;
     }
-    footer{
+    footer .max{
         flex-direction:column;
     }
     .footerNav{
