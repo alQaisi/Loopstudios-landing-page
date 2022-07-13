@@ -69,7 +69,6 @@ a:hover::after,i:hover::after{
 }
 .logo{
     margin-right: auto;
-    z-index: 100;
 }
 header h1{
     color: white;
@@ -262,7 +261,7 @@ footer .max{
     overflow-y: auto;
     color: white;
     box-sizing: border-box;
-    padding:40px 15px;
+    padding:35px 25px;
     display: block;
     transform: translateY(-100%);
     animation-name: firstMove;
@@ -362,9 +361,6 @@ a.menuItem{
     .close,.menuIcon:hover{
         cursor: pointer;
         filter: brightness(75%);
-    }
-    .close{
-        margin-left: auto;
     }
     .firstItem .text{
         width:unset;
