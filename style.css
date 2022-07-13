@@ -69,6 +69,7 @@ a:hover::after,i:hover::after{
 }
 .logo{
     margin-right: auto;
+    z-index: 100;
 }
 header h1{
     color: white;
@@ -261,15 +262,33 @@ footer .max{
     overflow-y: auto;
     color: white;
     box-sizing: border-box;
-    padding:35px 25px;
-    transition: all .55s cubic-bezier(0.785, 0.135, 0.15, 0.86);
-    transform:scale(0) ;
+    padding:35px 15px;
+    display: block;
+    transform: translateY(-100%);
+    animation-name: firstMove;
+    animation-duration: .65s;
+    animation-fill-mode: forwards;
 }
-.visible{
-    transform: scale(1); 
+.hide{
+    transform: translateY(-100%);
+    animation-name:lastMove;
+    animation-duration: .65s;
+    animation-fill-mode: forwards;
 }
 .hidden{
-    display: hidden;
+    display: none;
+}
+.menuOverlay a::after{
+    max-width: 100%;
+    width: 100%;
+}
+@keyframes firstMove {
+    from {transform:translateY(-100%);}
+    to {transform:translateY(0);}
+}
+@keyframes lastMove {
+    from {transform:translateY(0%);}
+    to {transform:translateY(-100%);}
 }
 .menuHeader{
     display: flex;
@@ -286,7 +305,6 @@ a.menuItem{
     text-transform: uppercase;
     letter-spacing: 2px;
 }
-
 @media screen and (max-width:1200px) {
     .image-interactivity{
         height:650px;
@@ -344,6 +362,9 @@ a.menuItem{
     .close,.menuIcon:hover{
         cursor: pointer;
         filter: brightness(75%);
+    }
+    .close{
+        margin-left: auto;
     }
     .firstItem .text{
         width:unset;
