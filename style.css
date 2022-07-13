@@ -262,7 +262,7 @@ footer .max{
     overflow-y: auto;
     color: white;
     box-sizing: border-box;
-    padding:35px 15px;
+    padding:40px 15px;
     display: block;
     transform: translateY(-100%);
     animation-name: firstMove;
