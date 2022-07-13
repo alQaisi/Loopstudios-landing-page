@@ -1,23 +1,15 @@
 const menu=document.querySelector(".menuOverlay");
 
 function changeMenuView(){
-    if(menu.classList.contains("hidden")){
+    if(menu.classList.contains("hidden"))
         menu.classList.remove("hidden");
-        menu.classList.add("visible");
-    }else{
-        menu.classList.remove("visible");
-        setTimeout(() => {
-            menu.classList.add("hidden");
-        },500);
-    }
+    else
+        menu.classList.toggle("hide");
 }
 
 function checkViewSize(query){
     if (query.matches){ 
-        menu.classList.remove("visible");
-        setTimeout(() => {
-            menu.classList.add("hidden");
-        },500);
+        Array.from(menu.classList).length==1?menu.classList.add("hide"):null;
     }
 }
 const query=window.matchMedia("(min-width:775px)");
